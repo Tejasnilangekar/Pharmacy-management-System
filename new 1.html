@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+function total()
+{
+var a = document.getElementById("rrp_exc");
+var b = document.getElementById("quantity");
+var e = document.getElementById("length");
+if(a.value=="")
+{
+a.value = 0;
+}
+if(b.value=="")
+{
+b.value = 1;
+}
+if(e.value=="")
+{
+e.value = 1;
+}
+var f = b.value * e.value;
+var g = (b.value/a.value)*100;
+var kl = g.toFixed(2);
+document.getElementById("total").value=f;
+document.getElementById("per").value=kl;
+}
+</script>
+
+<table>
+<input type="text" name=""  value="" >
+<input type="text" name="" id="rrp_exc" value="" onkeyup="total()">
+<input type="text" id="quantity" name="" value="" onkeyup="total()">
+<input type="text" id="length" name="" value="" onkeyup="total()">
+<input type="text" name="" id="total" value="">
+<input type="text" name="" id="per" value=""></table>
+</html>
+
+<script>
+
+
+function rtotal()
+{
+var ab = document.getElementById("rsp_exc");
+var ba = document.getElementById("iquantity");
+var ef = document.getElementById("clength");
+if(ba.value=="")
+{
+ba.value = 1;
+}
+if(ef.value=="")
+{
+ef.value = 1;
+}
+var fg = ba.value * ef.value;
+var gh = (ba.value/ab.value)*100;
+document.getElementById("rtotal").value=fg;
+document.getElementById("perc").value=gh;
+}
+</script>
+<table>
+<input type="text" name="" value="">
+<input type="text" name="" id="rsp_exc" value="" onkeyup="rtotal()">
+<input type="text" id="iquantity" name="" value="" onkeyup="rtotal()">
+<input type="text" id="clength" name="" value="" onkeyup="rtotal()">
+<input type="text" name="" id="rtotal" value="">
+ <input type="text" name="" id="perc" value="">                                              </table>
+
+<script>
+function vrtotal()
+{
+var abc = document.getElementById("rip_exc");
+var bac = document.getElementById("gquantity");
+var efh = document.getElementById("dlength");
+
+if(bac.value=="")
+{
+bac.value = 1;
+}
+if(efh.value=="")
+{
+efh.value = 1;
+}
+var fgm = bac.value * efh.value;
+document.getElementById("vrtotal").value=fgm;
+}
+</script>
+<table><input type="text" name="" id="rip_exc" value="" onkeyup="vrtotal()">
+<input type="text" id="gquantity" name="" value="" onkeyup="vrtotal()">
+<input type="text" id="dlength" name="" value="" onkeyup="vrtotal()">
+<input type="text" name="" id="vrtotal" value=""></table>
+</html>
